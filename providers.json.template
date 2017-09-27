@@ -76,8 +76,8 @@
   "facebook-link": {
     "provider": "facebook",
     "module": "passport-facebook",
-    "clientID": "{facebook-client-id-2}",
-    "clientSecret": "{facebook-client-secret-2}",
+    "clientID": "1510353002627471",
+    "clientSecret": "e1eacc2dd4e95a3dad995cb6f661a726",
     "callbackURL": "/link/facebook/callback",
     "authPath": "/link/facebook",
     "callbackPath": "/link/facebook/callback",
