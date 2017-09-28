@@ -1,8 +1,8 @@
 {
   "ids": {
-    "user": 3,
-    "accessToken": 7,
-    "userCredential": 2,
+    "user": 5,
+    "accessToken": 4,
+    "userCredential": 3,
     "userIdentity": 2,
     "ACL": 1,
     "RoleMapping": 1,
@@ -10,21 +10,22 @@
   },
   "models": {
     "user": {
-      "1": "{\"password\":\"$2a$10$gvQ.foSLcpeN1NI.heAFHOlZwhEYXgkPu36mU3kof.GvXWk3boa8O\",\"email\":\"wancchai@vstecs.co.th\",\"id\":1}",
-      "2": "{\"username\":\"facebook.1672840549403474\",\"password\":\"$2a$10$tmDUG6Bv2dj3LmU9Pz7rQeh6dobWh2utwZuCfgaruAtvrnj945Igq\",\"email\":\"1672840549403474@loopback.facebook.com\",\"id\":2}"
+      "1": "{\"username\":\"wanchai@vstecs.co.th\",\"password\":\"$2a$10$T3En6ltCSE34Pt529XdblOZY323fmiC8tx86PqzF6/u3om9KyAwji\",\"email\":\"wanchai@vstecs.co.th\",\"id\":1,\"verificationToken\":\"1fda304654a4c915db8d57001ef087f9d2b79ba1ba5fef77457095fd863f65275c79332975643ce531bbf4cf11cc1b85afbe9dc3b07a5d99c6cfc65065cc4dac\"}",
+      "2": "{\"username\":\"facebook.1672840549403474\",\"password\":\"$2a$10$Rztu4qTWa5deB8l2ptUPEuc2DoQ.0mse8rGrlPL.5dr4R41fpqi4W\",\"email\":\"1672840549403474@loopback.facebook.com\",\"id\":2}",
+      "3": "{\"username\":\"test\",\"password\":\"$2a$10$KGn2WslU5k7a2iyIRcmqZuGNCWFeIGBf8azVRqZbbUXDoZq6YEDRy\",\"email\":\"fuangmali@gmail.com\",\"id\":3,\"verificationToken\":\"c14d17f88da1e13c3ad93d7501445022610ae8c3bcf7358e1091ef7410fd4d71c44632c31e35568a923ea682a1f7ad35f950427838e6ad22c04c11d452f11eb9\"}",
+      "4": "{\"username\":\"a@a.com\",\"password\":\"$2a$10$Qs74ycfKq5.rAGb4Wqmls.9r6m2eE7/bsjIX3AS4SuJEuQgM6xvA2\",\"email\":\"a@a.com\",\"emailVerified\":false,\"id\":4}"
     },
     "accessToken": {
-      "KDjUPxNUvgxEP9ZpsN76VKHhSNgUYMEAecXb8fuREODHHE3DOBzkRAj0jjhKfXiF": "{\"id\":\"KDjUPxNUvgxEP9ZpsN76VKHhSNgUYMEAecXb8fuREODHHE3DOBzkRAj0jjhKfXiF\",\"ttl\":1209600,\"created\":\"2017-09-26T06:20:55.841Z\",\"userId\":2}",
-      "y37st7YyXdDLI7E21Ii5xM2PFodWe5RfEgMNWtkxVJGuVYeEMyIzP3fneAdHlcyG": "{\"id\":\"y37st7YyXdDLI7E21Ii5xM2PFodWe5RfEgMNWtkxVJGuVYeEMyIzP3fneAdHlcyG\",\"ttl\":1209600,\"created\":\"2017-09-26T06:22:52.137Z\",\"userId\":2}",
-      "fGiXKcMpiPXntb4tbD3lO97dpvaB2REVQ86Kgw6G0t86G9kaEax6h3oQyYG8qOHP": "{\"id\":\"fGiXKcMpiPXntb4tbD3lO97dpvaB2REVQ86Kgw6G0t86G9kaEax6h3oQyYG8qOHP\",\"ttl\":1209600,\"created\":\"2017-09-26T06:32:31.433Z\",\"userId\":2}",
-      "1IWXbBrs75cM1iQ1dUB3AU9bENPUNEkiszsBgXr4zBrKitkDWYo6CVb35UImBQkv": "{\"id\":\"1IWXbBrs75cM1iQ1dUB3AU9bENPUNEkiszsBgXr4zBrKitkDWYo6CVb35UImBQkv\",\"ttl\":1209600,\"created\":\"2017-09-27T07:20:42.752Z\",\"userId\":2}",
-      "CTFMpya1CffFhS8BpClKQE6wgnSxcpNIm1tBJgfO8JuyD1B8xk6so9e8YM33Sku6": "{\"id\":\"CTFMpya1CffFhS8BpClKQE6wgnSxcpNIm1tBJgfO8JuyD1B8xk6so9e8YM33Sku6\",\"ttl\":1209600,\"created\":\"2017-09-27T09:13:16.470Z\",\"userId\":2}"
+      "xHCE86A79zKD2GRT4eewlVFhxIIoot2l7vtYcufmqWIHW4Y73EqqqYcrLWcdKCTp": "{\"id\":\"xHCE86A79zKD2GRT4eewlVFhxIIoot2l7vtYcufmqWIHW4Y73EqqqYcrLWcdKCTp\",\"ttl\":1209600,\"created\":\"2017-09-27T09:39:40.695Z\",\"userId\":2}",
+      "vtel2OPsA94sirmpujrPlkByS7YA8gFdHyM5fFt4B02JaBCdmg28sIovwqUx7GNC": "{\"id\":\"vtel2OPsA94sirmpujrPlkByS7YA8gFdHyM5fFt4B02JaBCdmg28sIovwqUx7GNC\",\"ttl\":1209600,\"created\":\"2017-09-27T09:53:31.765Z\",\"userId\":1}",
+      "0vPJtajx36NFvyJv6yz6dxb49FF8XSJ2RCtG1YkVeaJspeXxscQOqQT1MGZsSt3B": "{\"id\":\"0vPJtajx36NFvyJv6yz6dxb49FF8XSJ2RCtG1YkVeaJspeXxscQOqQT1MGZsSt3B\",\"ttl\":1209600,\"created\":\"2017-09-27T09:54:24.858Z\",\"userId\":1}"
     },
     "userCredential": {
-      "1": "{\"provider\":\"facebook\",\"authScheme\":\"oAuth 2.0\",\"externalId\":\"1672840549403474\",\"profile\":{\"id\":\"1672840549403474\",\"displayName\":\"Wanchai Fuangmali\",\"name\":{},\"provider\":\"facebook\",\"_raw\":\"{\\\"name\\\":\\\"Wanchai Fuangmali\\\",\\\"id\\\":\\\"1672840549403474\\\"}\",\"_json\":{\"name\":\"Wanchai Fuangmali\",\"id\":\"1672840549403474\"}},\"credentials\":{\"accessToken\":\"EAAVdqHY1AY8BALyKOZCMDtgZBpikduvwlgKiBmV5AgLnVu1lBYcU2lMsQKX7orZCbkQudmikjx50AnGb81LO6bW9gMLxcXIW5g4YnNyoFRVSIrQak4H6QTfxmv96fhZAW57jZBa06JjLWXCJqn6BvK6urKMO6lHqvSonVcRVMlgZDZD\"},\"created\":\"2017-09-26T06:21:08.728Z\",\"modified\":\"2017-09-26T06:21:08.728Z\",\"userId\":2,\"id\":1}"
+      "1": "{\"provider\":\"facebook\",\"authScheme\":\"oAuth 2.0\",\"externalId\":\"1672840549403474\",\"profile\":{\"id\":\"1672840549403474\",\"displayName\":\"Wanchai Fuangmali\",\"name\":{},\"provider\":\"facebook\",\"_raw\":\"{\\\"name\\\":\\\"Wanchai Fuangmali\\\",\\\"id\\\":\\\"1672840549403474\\\"}\",\"_json\":{\"name\":\"Wanchai Fuangmali\",\"id\":\"1672840549403474\"}},\"credentials\":{\"accessToken\":\"EAAVdqHY1AY8BAMGLCuUf0VC3zoNuOx9XbdvuSa9p7XnefhIa3VkFpBFsVMUfYvsExtAEGl6VJq3nsknZC3EKjfayQyekUCOgSa7rcbnNxIuQYN8CgY3ZBt88CFFhtFh36itlYJsK6zuq3ec9Cx8NwdK0mOSZBdUKrIBzHSGjgZDZD\"},\"created\":\"2017-09-27T09:32:11.231Z\",\"modified\":\"2017-09-27T09:32:11.231Z\",\"userId\":1,\"id\":1}",
+      "2": "{\"provider\":\"facebook\",\"authScheme\":\"oAuth 2.0\",\"externalId\":\"1672840549403474\",\"profile\":{\"id\":\"1672840549403474\",\"displayName\":\"Wanchai Fuangmali\",\"name\":{},\"provider\":\"facebook\",\"_raw\":\"{\\\"name\\\":\\\"Wanchai Fuangmali\\\",\\\"id\\\":\\\"1672840549403474\\\"}\",\"_json\":{\"name\":\"Wanchai Fuangmali\",\"id\":\"1672840549403474\"}},\"credentials\":{\"accessToken\":\"EAAVdqHY1AY8BAMz7MJCXy4g1jd7P5ubo7HnzeKsGGH3RmvHcDNCUhoYOFm1mBwFK9crgyCQJYIhH0ydpWm0JsIHZCC6OTpZCPCDfiRV8A7SzeQPA4oOngwDLTNOeX5O4y78XYW51GMhVhih6769prTFccj4i5fqhk9ZBAu5dQZDZD\"},\"created\":\"2017-09-27T09:44:03.947Z\",\"modified\":\"2017-09-27T09:44:03.947Z\",\"userId\":3,\"id\":2}"
     },
     "userIdentity": {
-      "1": "{\"provider\":\"facebook\",\"authScheme\":\"oAuth 2.0\",\"externalId\":\"1672840549403474\",\"profile\":{\"id\":\"1672840549403474\",\"name\":{\"familyName\":\"Fuangmali\",\"givenName\":\"Wanchai\"},\"gender\":\"male\",\"profileUrl\":\"https://www.facebook.com/app_scoped_user_id/1672840549403474/\",\"emails\":[{\"value\":\"fuangmali@gmail.com\"}],\"provider\":\"facebook\",\"_raw\":\"{\\\"gender\\\":\\\"male\\\",\\\"link\\\":\\\"https:\\\\/\\\\/www.facebook.com\\\\/app_scoped_user_id\\\\/1672840549403474\\\\/\\\",\\\"locale\\\":\\\"th_TH\\\",\\\"last_name\\\":\\\"Fuangmali\\\",\\\"first_name\\\":\\\"Wanchai\\\",\\\"timezone\\\":7,\\\"verified\\\":true,\\\"email\\\":\\\"fuangmali\\\\u0040gmail.com\\\",\\\"updated_time\\\":\\\"2017-06-27T15:10:44+0000\\\",\\\"id\\\":\\\"1672840549403474\\\"}\",\"_json\":{\"gender\":\"male\",\"link\":\"https://www.facebook.com/app_scoped_user_id/1672840549403474/\",\"locale\":\"th_TH\",\"last_name\":\"Fuangmali\",\"first_name\":\"Wanchai\",\"timezone\":7,\"verified\":true,\"email\":\"fuangmali@gmail.com\",\"updated_time\":\"2017-06-27T15:10:44+0000\",\"id\":\"1672840549403474\"}},\"credentials\":{\"accessToken\":\"EAAVdqHY1AY8BAL9aPtZA0GEjpNDvKncE9XLjF3Gm4Bg6fMomYLr7jlGJw522OgJLRbwBVIZAlgMa43l6hLkC4taTabOFwoxyrTtytLwfdKDDXiyStE0ZAVSAOiU0dZAdpE5RQnZBmRMMi86XnFUON0MXsivFnBJ0J3oWd4pfc5gZDZD\"},\"created\":\"2017-09-26T06:20:55.838Z\",\"modified\":\"2017-09-27T09:13:16.443Z\",\"userId\":2,\"id\":1}"
+      "1": "{\"provider\":\"facebook\",\"authScheme\":\"oAuth 2.0\",\"externalId\":\"1672840549403474\",\"profile\":{\"id\":\"1672840549403474\",\"name\":{\"familyName\":\"Fuangmali\",\"givenName\":\"Wanchai\"},\"gender\":\"male\",\"profileUrl\":\"https://www.facebook.com/app_scoped_user_id/1672840549403474/\",\"emails\":[{\"value\":\"fuangmali@gmail.com\"}],\"provider\":\"facebook\",\"_raw\":\"{\\\"gender\\\":\\\"male\\\",\\\"link\\\":\\\"https:\\\\/\\\\/www.facebook.com\\\\/app_scoped_user_id\\\\/1672840549403474\\\\/\\\",\\\"locale\\\":\\\"th_TH\\\",\\\"last_name\\\":\\\"Fuangmali\\\",\\\"first_name\\\":\\\"Wanchai\\\",\\\"timezone\\\":7,\\\"verified\\\":true,\\\"email\\\":\\\"fuangmali\\\\u0040gmail.com\\\",\\\"updated_time\\\":\\\"2017-06-27T15:10:44+0000\\\",\\\"id\\\":\\\"1672840549403474\\\"}\",\"_json\":{\"gender\":\"male\",\"link\":\"https://www.facebook.com/app_scoped_user_id/1672840549403474/\",\"locale\":\"th_TH\",\"last_name\":\"Fuangmali\",\"first_name\":\"Wanchai\",\"timezone\":7,\"verified\":true,\"email\":\"fuangmali@gmail.com\",\"updated_time\":\"2017-06-27T15:10:44+0000\",\"id\":\"1672840549403474\"}},\"credentials\":{\"accessToken\":\"EAAVdqHY1AY8BAHFtF49I2T6t9ZC479wlLz2SIZAcRVZAO7YqxPh1wrSoDHXUUTPXGbEr6pPYcLtcxxEZBy6klbreUS4J0HBs6w9kMVZBKpVZBD4ZBSTLGW1bY6CipjKziEJYXg9MLDaTisCNvPrTmG0mPIYkkMZAjZA99fbO9cdZAwZCwZDZD\"},\"created\":\"2017-09-27T09:39:40.672Z\",\"modified\":\"2017-09-27T09:39:40.672Z\",\"userId\":2,\"id\":1}"
     },
     "ACL": {},
     "RoleMapping": {},
