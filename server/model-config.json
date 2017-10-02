@@ -33,5 +33,9 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Email": {
+    "dataSource": "Email",
+    "public": true
   }
 }
