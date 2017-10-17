@@ -1,0 +1,26 @@
+extends layout
+
+block custom_style
+	// style(type='text/css')
+		body {padding-top: 40px;}
+		.color-red {color: red;}
+		.color-blue {color: blue;} 
+
+block navbar
+	ul#side-menu.nav
+		profile(:menus=JSON.stringify(user.menus),name=user.name,position=user.position,profile_img = user.profile_img)
+		each userapp,index in userapps
+			app-menus(id=index,app_icont=userapp.icont ,app_href= userapp.href,app_name=userapp.name, :menus=JSON.stringify(userapp.menus))
+		
+block content-header
+	header-layout
+		welcome-message Welcome to #{site.name}
+		alerts-box
+		messages-box
+		
+		logout
+		
+
+block content-body
+	div#page-wrapper.gray-bg.dashbard-1
+		router-view
