@@ -3,5 +3,19 @@
     "name": "db",
     "connector": "memory",
     "file":"db.json"
-  }
+  },
+  "myEmailDataSource": {
+  "name": "mail",
+  "connector": "mail",
+  "transports": [{
+    "type": "SMTP",
+    "host": "smtp.gmail.com",
+    "secure": true,
+    "port": 465,
+    "auth": {
+      "user": "wsmtpserv@gmail.com",
+      "pass": "wanchai00--"
+    }
+  }]
+}
 }

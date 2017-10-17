@@ -6,6 +6,9 @@
       "./node_modules/loopback-component-passport/lib/models"
     ]
   },
+  "Email": {
+    "dataSource": "myEmailDataSource"
+  },
   "user": {
     "dataSource": "db",
     "public": true
