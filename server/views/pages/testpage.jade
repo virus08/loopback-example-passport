@@ -8,10 +8,8 @@ block custom_style
 
 block navbar
 	ul#side-menu.nav
-		profile(:menus=JSON.stringify(user.menus),name=user.name,position=user.position,profile_img = user.profile_img)
-		each userapp,index in userapps
-			app-menus(id=index,app_icont=userapp.icont ,app_href= userapp.href,app_name=userapp.name, :menus=JSON.stringify(userapp.menus))
-		
+		profile(name='test',position='test1')
+				
 block content-header
 	header-layout
 		welcome-message Welcome to #{site.name}

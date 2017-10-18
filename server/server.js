@@ -87,14 +87,16 @@ for (var s in config) {
 }
 var ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn;
 
-app.get('/', ensureLoggedIn('/local'), function(req, res, next) {
+//app.get('/', function(req, res, next) {
+app.get('/',ensureLoggedIn('/local'), function(req, res, next) {
   res.render('pages/app01', {user:
     req.user,
     url: req.url,
     site:{
-		name : 'Presales Timesheet Application',
+		name : 'INSPINIA+ Admin Themexx.',
 		title:'My App Title1 '
-	}
+	},
+	routes:[]
   });
 });
 

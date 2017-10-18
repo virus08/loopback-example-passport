@@ -260,7 +260,7 @@ Vue.component('profile', {
 			<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 				<span class="clear"> 
 					<span class="block m-t-xs"> 
-						<strong class="font-bold">{{name}}</strong>
+						<strong class="font-bold">wanchai</strong>
 					</span> 
 					<span class="text-muted text-xs block">
 					{{position}} <b v-if="menus !== null" class="caret"></b>

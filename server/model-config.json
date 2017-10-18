@@ -36,5 +36,9 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "user_profile": {
+    "dataSource": "db",
+    "public": true
   }
 }

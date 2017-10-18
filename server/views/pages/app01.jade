@@ -8,18 +8,15 @@ block custom_style
 
 block navbar
 	ul#side-menu.nav
-		if user && user.username
-			.row
-				.col-md-12
-					.well
-						h3 Hello: #{user.username}
-						p.small User Id: #{user.id}
-						p.small Email: #{user.email}
-
+		profile(name='test',position='test1')
+				
 block content-header
 	header-layout
 		welcome-message Welcome to #{site.name}
-
+		alerts-box
+		messages-box
+		
+		logout
 		
 
 block content-body

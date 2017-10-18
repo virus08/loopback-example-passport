@@ -2,20 +2,22 @@
   "db": {
     "name": "db",
     "connector": "memory",
-    "file":"db.json"
+    "file": "db.json"
   },
   "myEmailDataSource": {
-	  "name": "mail",
-	  "connector": "mail",
-	  "transports": [{
-	    "type": "SMTP",
-	    "host": "smtp.gmail.com",
-	    "secure": false,
-	    "port": 25,
-	    "auth": {
-	      "user": "wsmtpserv@gmail.com",
-	      "pass": "wanchai00--"
-	    }
-	  }]
-	}
+    "name": "myEmailDataSource",
+    "connector": "mail",
+    "transports": [
+      {
+        "type": "SMTP",
+        "host": "smtp.gmail.com",
+        "secure": false,
+        "port": 25,
+        "auth": {
+          "user": "wsmtpserv@gmail.com",
+          "pass": "wanchai00--"
+        }
+      }
+    ]
+  }
 }
