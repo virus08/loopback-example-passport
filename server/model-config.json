@@ -37,7 +37,7 @@
     "dataSource": "db",
     "public": false
   },
-  "user_profile": {
+  "profiles": {
     "dataSource": "db",
     "public": true
   }

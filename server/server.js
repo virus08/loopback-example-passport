@@ -75,6 +75,8 @@ passportConfigurator.init();
 // We need flash messages to see passport errors
 app.use(flash());
 
+//app.model(User_Profiles);
+
 passportConfigurator.setupModels({
   userModel: app.models.user,
   userIdentityModel: app.models.userIdentity,
