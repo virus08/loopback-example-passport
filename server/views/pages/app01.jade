@@ -8,17 +8,18 @@ block custom_style
 
 block navbar
 	ul#side-menu.nav
-		profile(:menus=JSON.stringify(user.menus),name=user.name,position=user.position,profile_img = user.profile_img)
-		each userapp,index in userapps
-			app-menus(id=index,app_icont=userapp.icont ,app_href= userapp.href,app_name=userapp.name, :menus=JSON.stringify(userapp.menus))
-		
+		if user && user.username
+			.row
+				.col-md-12
+					.well
+						h3 Hello: #{user.username}
+						p.small User Id: #{user.id}
+						p.small Email: #{user.email}
+
 block content-header
 	header-layout
 		welcome-message Welcome to #{site.name}
-		alerts-box
-		messages-box
-		
-		logout
+
 		
 
 block content-body

@@ -87,15 +87,91 @@ for (var s in config) {
 }
 var ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn;
 
-app.get('/', function(req, res, next) {
-  res.render('pages/index', {user:
+app.get('/', ensureLoggedIn('/local'), function(req, res, next) {
+  res.render('pages/app01', {user:
     req.user,
     url: req.url,
+    site:{
+		name : 'Presales Timesheet Application',
+		title:'My App Title1 '
+	}
   });
 });
 
-app.get('/auth/account', ensureLoggedIn('/login'), function(req, res, next) {
-  res.render('pages/loginProfiles', {
+app.get('/testpage', function(req, res, next) {
+	  res.render('pages/testpage', {user:
+	    req.user,
+	    url: req.url,
+	    site:{
+			name : 'INSPINIA+ Admin Themexx.',
+			title:'My App Title1 '
+		},
+		user:{
+			name:'Wanchai Fuangmali',
+			position:'Pre-Sales',
+			profile_img:'img/profile_small.jpg',
+			menus:[
+				{
+					href:'profile.html',
+					label:'Profile'
+				},{
+					href:'contacts.html',
+					label:'Contacts'
+				}
+			]
+		},
+		xpath:'#',
+		routes:[{ 
+			path: '/das1',
+			component: { 
+				template: '<async-example></async-example>' 
+			}},{ 
+			path: '/das2',
+			component: { 
+				template: '<div><h1> Dashboard v.2</h1></div>' 
+			}},{
+			path: '/report1',
+			component: { 
+				template: '<div><h1> Report v.1</h1></div>' 
+			}},{
+			path: '/report2',
+			component: { 
+				template: '<div><h1> Report v.2</h1></div>' 
+			}}
+			],
+		userapps:[
+			{
+				name:'App1',
+				href:'#',
+				icont:'fa fa-th-large',
+				menus:[
+				{
+					href:'#/das1',
+					label:'Dashboard v.1'
+				},{
+					href:'#/das2',
+					label:'Dashboard v.2'
+				}],
+			},
+			{
+				name:'App2',
+				href:'#',
+				icont:'fa fa-th-large',
+				menus:[
+				{
+					href:'#/report1',
+					label:'Report v.1'
+				},
+				{
+					href:'#/report2',
+					label:'Report v.2'
+				}],
+			}
+		]
+	  });
+	});
+app.get('/auth/account', ensureLoggedIn('/local'), function(req, res, next) {
+  res.render('pages/app01', {
     user: req.user,
     url: req.url,
   });
