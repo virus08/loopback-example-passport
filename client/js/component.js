@@ -1,3 +1,72 @@
+Vue.component('profile', {
+  props: ['source'],
+  // just like data, the prop can be used inside templates
+  // and is also made available in the vm as this.message
+  data: function () {
+	    return {
+	    	profiles: null
+	    }
+	  },
+  methods: {
+	getUsers: function(){
+		this.$http.get(this.source).then(function(response){
+			this.profiles = response.data;
+		}, function(error){
+			console.log(error.statusText);
+		});
+	}
+  },
+  mounted: function () {
+	this.getUsers();
+  },
+  template: `
+	<li class="nav-header">
+		<center>
+		<div class="dropdown profile-element"> 
+			<span>
+				<img alt="image" class="img-circle" v-bind:src='profiles.picture' />
+			</span>
+			<span class="clear"> 
+				<span class="block m-t-xs"> 
+					<strong class="font-bold">{{profiles.Name}} {{profiles.Sname}}</strong>
+				</span> 
+				<span class="text-muted text-xs block">
+				{{profiles.position}}</b>
+				</span>
+			</span> 
+		</div>
+		</center>
+        <div class="logo-element">
+			IN+
+		</div>
+	</li>
+`
+});
+
+Vue.component('test', {
+	 props: ['source'],
+	 template: '<div>{{ list. }}</div>',
+	 data: function () {
+	    return {
+	    	list: null
+	    }
+	  },
+	  methods: {
+		  getUsers: function(){
+	            this.$http.get(this.source).then(function(response){
+	                this.list = response.data;
+	            }, function(error){
+	                console.log(error.statusText);
+	            });
+	        }
+	    },
+	    mounted: function () {
+	        this.getUsers();
+	    }
+	})
+
+
+
 Vue.component('async-example', function (resolve, reject) {
   setTimeout(function () {
     // Pass the component definition to the resolve callback
@@ -226,8 +295,7 @@ Vue.component('profile-menu-list', {
     })
 	
 	
-Vue.component('profile', {
-
+Vue.component('profile1', {
   props: {
     name: {
       type: String,
@@ -246,8 +314,9 @@ Vue.component('profile', {
 		default: function () {
 			return null
 		}
-	}
+	},
   },
+ 
   // just like data, the prop can be used inside templates
   // and is also made available in the vm as this.message
   template: `
@@ -275,3 +344,5 @@ Vue.component('profile', {
 	</li>
 `
 });
+
+

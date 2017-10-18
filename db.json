@@ -6,7 +6,8 @@
     "userIdentity": 1,
     "ACL": 1,
     "RoleMapping": 1,
-    "Role": 1
+    "Role": 1,
+    "profiles": 2
   },
   "models": {
     "user": {
@@ -17,6 +18,9 @@
     "userIdentity": {},
     "ACL": {},
     "RoleMapping": {},
-    "Role": {}
+    "Role": {},
+    "profiles": {
+      "1": "{\"id\":1,\"Name\":\"Wanchai\",\"uid\":1,\"Sname\":\"Fuangmali\",\"position\":\"Pre-Sales\",\"picture\":\"img/profile_small.jpg\"}"
+    }
   }
 }

@@ -95,8 +95,8 @@ app.get('/',ensureLoggedIn('/local'), function(req, res, next) {
     req.user,
     url: req.url,
     site:{
-		name : 'INSPINIA+ Admin Themexx.',
-		title:'My App Title1 '
+		name : 'ES-Presales Timesheet Application',
+		title:'Timesheet'
 	},
 	routes:[]
   });

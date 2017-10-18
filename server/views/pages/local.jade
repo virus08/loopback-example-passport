@@ -1,8 +1,15 @@
-extends ../layouts/layout
+extends ../layouts/login_layout
 
 block content
-  .row
-    .col-md-6.col-md-offset-3
+ div.middle-box.text-center.loginscreen.animated.fadeInDown
+  div
+   div
+    h1.logo-name ES
+   h3 Welcome to VSTECS
+   
+   p Detail of this app bla bla.
+   p Login in. To see it in action.
+   .row
       form(role='form', action='/auth/local', method='post')
         .form-group
           label(for='username') Your username

@@ -8,14 +8,11 @@ block custom_style
 
 block navbar
 	ul#side-menu.nav
-		profile(name='test',position='test1')
+		profile(source="http://localhost:3000/api/profiles/#{user.id}")
 				
 block content-header
 	header-layout
 		welcome-message Welcome to #{site.name}
-		alerts-box
-		messages-box
-		
 		logout
 		
 
