@@ -9,6 +9,8 @@ block custom_style
 block navbar
 	ul#side-menu.nav
 		profile(source="http://localhost:3000/api/profiles/#{user.id}")
+		each userapp,index in userapps
+			app-menus(id=index,app_icont=userapp.icont ,app_href= userapp.href,app_name=userapp.name, :menus=JSON.stringify(userapp.menus))
 				
 block content-header
 	header-layout
@@ -17,5 +19,6 @@ block content-header
 		
 
 block content-body
-	div#page-wrapper.gray-bg.dashbard-1
+	div.gray-bg.dashbard-1
 		router-view
+		

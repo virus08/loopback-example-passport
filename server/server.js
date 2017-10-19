@@ -98,7 +98,35 @@ app.get('/',ensureLoggedIn('/local'), function(req, res, next) {
 		name : 'ES-Presales Timesheet Application',
 		title:'Timesheet'
 	},
-	routes:[]
+	routes:[{ 
+		path: '/',
+		component: { 
+			template: '<test1 source="http://vuetable.ratiw.net/api/users"></test1>' 
+		}},{ 
+		path: '/Dashboard',
+		component: { 
+			template: '<div><h1> Dashboard v.1</h1></div>' 
+			}},{ 
+		path: '/Timesheet',
+		component: { 
+			template: '<div><h1> Timesheet</h1></div>' 
+		}}
+		],
+		userapps:[
+			{
+				name:'Enterprise Application',
+				href:'#',
+				icont:'fa fa-th-large',
+				menus:[
+				{
+					href:'#/Dashboard',
+					label:'Dashboard v.1'
+				},{
+					href:'#/Timesheet',
+					label:'Dashboard v.2'
+				}],
+			}
+		]
   });
 });
 

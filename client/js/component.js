@@ -1,3 +1,40 @@
+Vue.component('test1', {
+	 props: ['source'],
+	 template: `<div>
+		 			<table class="table">
+		 				<tr><td>Name</td><td>Email</td><td>Gender</td><td>Salary</td><td>Group</td></tr>
+		 				
+		 			 	<tr v-for="data in list.data"> 
+		 			 		<td><span>{{data.name}} {{data.nickname}}</span></td>
+		 			 		<td><span>{{data.email}}</span></td>
+		 			 		<td><span>{{data.gender}}</span></td>
+		 			 		<td><span>{{data.salary}}</span></td>
+		 			 		<td><span>{{data.group.description}}</span></td> 
+		 			 	</tr>
+		 			</table>
+		 		</div>
+	 `,
+	 data: function () {
+	    return {
+	    	list: null
+	    }
+	  },
+	  methods: {
+		  getUsers: function(){
+	            this.$http.get(this.source).then(function(response){
+	                this.list = response.data;
+	            }, function(error){
+	                console.log(error.statusText);
+	            });
+	        }
+	    },
+	    mounted: function () {
+	        this.getUsers();
+	    }
+	})
+
+
+
 Vue.component('profile', {
   props: ['source'],
   // just like data, the prop can be used inside templates
@@ -166,54 +203,5 @@ Vue.component('profile-menu-list', {
     })
 	
 	
-Vue.component('profile1', {
-  props: {
-    name: {
-      type: String,
-      default: 'David Williams'
-    },
-	profile_img:{
-		type: String,
-		default: 'img/profile_small.jpg'
-	},
-	position:{
-		type:String,
-		default: 'Staff'
-	},
-	menus:{
-		type: Array,
-		default: function () {
-			return null
-		}
-	},
-  },
- 
-  // just like data, the prop can be used inside templates
-  // and is also made available in the vm as this.message
-  template: `
-	<li class="nav-header">
-		<center>
-		<div class="dropdown profile-element"> 
-			<span>
-				<img alt="image" class="img-circle" v-bind:src="profile_img" />
-			</span>
-			<a data-toggle="dropdown" class="dropdown-toggle" href="#">
-				<span class="clear"> 
-					<span class="block m-t-xs"> 
-						<strong class="font-bold">wanchai</strong>
-					</span> 
-					<span class="text-muted text-xs block">
-					{{position}}</b>
-					</span>
-				</span> 
-			</a>
-		</div>
-		</center>
-        <div class="logo-element">
-			IN+
-		</div>
-	</li>
-`
-});
 
 
