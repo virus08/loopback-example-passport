@@ -5,6 +5,8 @@ const router = new VueRouter({
 	routes // short for `routes: routes`
 })
 const app = new Vue({
-	router
+	router,
+	components: {
+	    circleslider: VueCircleSlider.VueCircleSlider
+	  }
 }).$mount('#wrapper')
-

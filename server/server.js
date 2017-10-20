@@ -101,7 +101,7 @@ app.get('/',ensureLoggedIn('/local'), function(req, res, next) {
 	routes:[{ 
 		path: '/',
 		component: { 
-			template: '<test1 source="http://vuetable.ratiw.net/api/users"></test1>' 
+			template: '<Timesheet source="http://localhost:3000/api/timesheets" uid=1></test1>' 
 		}},{ 
 		path: '/Dashboard',
 		component: { 

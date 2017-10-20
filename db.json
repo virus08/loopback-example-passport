@@ -7,7 +7,8 @@
     "ACL": 1,
     "RoleMapping": 1,
     "Role": 1,
-    "profiles": 2
+    "profiles": 2,
+    "timesheet": 5
   },
   "models": {
     "user": {
@@ -21,6 +22,12 @@
     "Role": {},
     "profiles": {
       "1": "{\"id\":1,\"Name\":\"Wanchai\",\"uid\":1,\"Sname\":\"Fuangmali\",\"position\":\"Pre-Sales\",\"picture\":\"img/profile_small.jpg\"}"
+    },
+    "timesheet": {
+      "1": "{\"Name_Surname\":\"Wanchai Fuangmali\",\"Job_Type\":\"Documentation\",\"Job_arear\":\"\",\"Base_Technology\":[\"Cloud\",\"Network\"],\"UID\":1,\"Job_Header\":\"Test Job\",\"Job_detail\":\"Test รายละเอียด\",\"create_date\":\"2017-10-20T11:38:13.162Z\",\"Job_date\":\"2017-10-06T00:00:00.000Z\",\"modify_date\":\"2017-10-20T11:38:13.162Z\",\"Job_Hours\":1.51,\"Job_progress\":0,\"contract\":[\"ใครซักคน\"],\"Job_status\":\"Open\",\"remark\":[\"0\"],\"id\":1}",
+      "2": "{\"Name_Surname\":\"Wanchai Fuangmali\",\"Job_Type\":\"Self POC by VST ECS\",\"Job_arear\":\"\",\"Base_Technology\":[\"Network\"],\"UID\":1,\"Job_Header\":\"test123\",\"Job_detail\":\"12346\",\"create_date\":\"2017-10-20T11:39:13.686Z\",\"Job_date\":\"2017-10-04T00:00:00.000Z\",\"modify_date\":\"2017-10-20T11:39:13.686Z\",\"Job_Hours\":11,\"Job_progress\":0,\"contract\":[\"ไม่มี\"],\"Job_status\":\"Open\",\"remark\":[\"0\"],\"id\":2}",
+      "3": "{\"Name_Surname\":\"Wanchai Fuangmali\",\"Job_Type\":\"Self POC by VST ECS\",\"Job_arear\":\"\",\"Base_Technology\":[\"Security\"],\"UID\":1,\"Job_Header\":\"dsd\",\"Job_detail\":\"sd\",\"create_date\":\"2017-10-20T11:41:53.900Z\",\"Job_date\":\"2017-10-25T00:00:00.000Z\",\"modify_date\":\"2017-10-20T11:41:53.900Z\",\"Job_Hours\":1,\"Job_progress\":0,\"contract\":[],\"Job_status\":\"Open\",\"remark\":[\"0\"],\"id\":3}",
+      "4": "{\"Name_Surname\":\"Wanchai Fuangmali\",\"Job_Type\":\"Comply\",\"Job_arear\":\"\",\"Base_Technology\":[\"VM Infrastructure\",\"Security\"],\"UID\":1,\"Job_Header\":\"sdad\",\"Job_detail\":\"sadasd\",\"create_date\":\"2017-10-20T11:44:11.462Z\",\"Job_date\":\"2017-10-21T00:00:00.000Z\",\"modify_date\":\"2017-10-20T11:44:11.462Z\",\"Job_Hours\":3,\"Job_progress\":0,\"contract\":[],\"Job_status\":\"Open\",\"remark\":[\"0\"],\"id\":4}"
     }
   }
 }
