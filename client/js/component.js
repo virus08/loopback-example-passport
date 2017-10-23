@@ -355,7 +355,7 @@ Vue.component('Timesheet', {
                                     </tr>
                                     </tbody>
                                 </table>
-                                <New_Job name='#newjob-form' UID=1 ></New_Job>
+                                <New_Job name='#newjob-form' :UID=uid ></New_Job>
                             </div>
                             
                         </div>
@@ -431,9 +431,8 @@ Vue.component('Timesheet1', {
                                     </tr>
                                     </tbody>
                                 </table>
-                                <New_Job name='#newjob-form' UID=1 ></New_Job>
+                                <New_Job name='#newjob-form' :UID=uid></New_Job>
                             </div>
-                            
                         </div>
                     </div>
                 </div>

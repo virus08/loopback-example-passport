@@ -1,18 +1,19 @@
 {
   "ids": {
-    "user": 2,
+    "user": 3,
     "accessToken": 1,
     "userCredential": 1,
     "userIdentity": 1,
     "ACL": 1,
     "RoleMapping": 1,
     "Role": 1,
-    "profiles": 2,
-    "timesheet": 9
+    "profiles": 3,
+    "timesheet": 3
   },
   "models": {
     "user": {
-      "1": "{\"realm\":\"\",\"username\":\"wanchai\",\"password\":\"$2a$10$oqr2VtopP38qyeBU0.7k8unmbtaAyKoASsxAoLomHIK0iQo6OH2j2\",\"email\":\"wanchai@vstecs.co.th\",\"emailVerified\":true,\"id\":1}"
+      "1": "{\"username\":\"wanchai\",\"password\":\"$2a$10$eZFX1BgnKt6rRrMYfzV2euV3aCrtFr5r5Ao.chP4b8MmelMzCLp1O\",\"email\":\"wanchai@vstecs.co.th\",\"emailVerified\":true,\"id\":1}",
+      "2": "{\"username\":\"user1\",\"password\":\"$2a$10$rHhZ5dGhFHABsYZIJLCanO8y0MRd6zN9MmKFGDm7BadidwxNs0fqu\",\"email\":\"oracle@vstecs.co.th\",\"emailVerified\":true,\"id\":2}"
     },
     "accessToken": {},
     "userCredential": {},
@@ -21,14 +22,12 @@
     "RoleMapping": {},
     "Role": {},
     "profiles": {
-      "1": "{\"id\":1,\"Name\":\"Wanchai\",\"uid\":1,\"Sname\":\"Fuangmali\",\"position\":\"Pre-Sales\",\"picture\":\"img/profile_small.jpg\"}"
+      "1": "{\"Name\":\"Wanchai\",\"uid\":1,\"Sname\":\"Fuangmali\",\"position\":\"Pre-Sales\",\"picture\":\"img/profile_small.jpg\",\"id\":1}",
+      "2": "{\"Name\":\"Oracle\",\"uid\":2,\"Sname\":\"Hotman\",\"position\":\"Pre-Sales\",\"picture\":\"img/profile_small.jpg\",\"id\":2}"
     },
     "timesheet": {
-      "4": "{\"id\":4,\"Name_Surname\":\"Wanchai Fuangmali\",\"Job_Type\":\"Documentation\",\"Job_arear\":\"\",\"Base_Technology\":[\"VM Infrastructure\",\"Network\"],\"UID\":1,\"Job_Header\":\"งานใหม่มาก\",\"Job_detail\":\"ด่วนสุดๆ \",\"create_date\":\"2017-10-23T01:21:00.336Z\",\"Job_date\":\"2017-10-20T00:00:00.000Z\",\"modify_date\":\"2017-10-23T02:31:11.901Z\",\"Job_Hours\":51,\"Job_progress\":100,\"contract\":[\"dfsfs\"],\"Job_status\":\"Completed\",\"remark\":[\"0\"]}",
-      "5": "{\"id\":5,\"Name_Surname\":\"Wanchai Fuangmali\",\"Job_Type\":\"POC with vServe Plus\",\"Job_arear\":\"\",\"Base_Technology\":[\"Cloud\",\"VM Infrastructure\",\"Software\",\"Image Process\",\"Peripheral\"],\"UID\":1,\"Job_Header\":\"งานที่สองของวัน\",\"Job_detail\":\"ไม่มี\",\"create_date\":\"2017-10-23T02:18:15.794Z\",\"Job_date\":\"2017-10-25T00:00:00.000Z\",\"modify_date\":\"2017-10-23T04:40:47.479Z\",\"Job_Hours\":111,\"Job_progress\":50,\"contract\":[\"Vserp Name P' aaa\",\"Vserp Name P' bbb\"],\"Job_status\":\"On Progress\",\"remark\":[\"0\"]}",
-      "6": "{\"Name_Surname\":\"Wanchai Fuangmali\",\"Job_Type\":\"POC with vServe Plus\",\"Job_arear\":\"\",\"Base_Technology\":[\"Network\"],\"UID\":1,\"Job_Header\":\"asd\",\"Job_detail\":\"asdasd\",\"create_date\":\"2017-10-23T02:36:30.611Z\",\"Job_date\":\"2017-10-18T00:00:00.000Z\",\"modify_date\":\"2017-10-23T02:36:30.611Z\",\"Job_Hours\":1,\"Job_progress\":0,\"contract\":[\"sdasd\",\"sdasd\",\"sdasd\"],\"Job_status\":\"Open\",\"remark\":[\"0\"],\"id\":6}",
-      "7": "{\"id\":7,\"Name_Surname\":\"Wanchai Fuangmali\",\"Job_Type\":\"Comply\",\"Job_arear\":\"\",\"Base_Technology\":[\"VM Infrastructure\",\"Security\"],\"UID\":1,\"Job_Header\":\"asdasd\",\"Job_detail\":\"asdasd\",\"create_date\":\"2017-10-23T03:10:49.904Z\",\"Job_date\":\"2017-10-14T00:00:00.000Z\",\"modify_date\":\"2017-10-23T03:11:42.791Z\",\"Job_Hours\":1,\"Job_progress\":70,\"contract\":[\"sdasd\",\"sdasd\",\"sdasd\"],\"Job_status\":\"On Progress\",\"remark\":[\"0\"]}",
-      "8": "{\"id\":8,\"Name_Surname\":\"Wanchai Fuangmali\",\"Job_Type\":\"Self POC by VST ECS\",\"Job_arear\":\"\",\"Base_Technology\":[\"Network\",\"Security\"],\"UID\":1,\"Job_Header\":\"sdffsd\",\"Job_detail\":\"ทำอะไรเพิ่มซักอย่าง\",\"create_date\":\"2017-10-23T04:43:02.530Z\",\"Job_date\":\"2017-10-13T00:00:00.000Z\",\"modify_date\":\"2017-10-23T04:44:21.392Z\",\"Job_Hours\":1,\"Job_progress\":10,\"contract\":[\"ยาย เบอร์ 099817729\"],\"Job_status\":\"On Progress\",\"remark\":[\"0\"]}"
+      "1": "{\"id\":1,\"Name_Surname\":\"Wanchai Fuangmali\",\"Job_Type\":\"Documentation\",\"Job_arear\":\"\",\"Base_Technology\":[\"VM Infrastructure\",\"Network\"],\"UID\":1,\"Job_Header\":\"งานใหม่\",\"Job_detail\":\"ใหม่มากๆ\",\"create_date\":\"2017-10-23T10:04:19.896Z\",\"Job_date\":\"2017-10-24T00:00:00.000Z\",\"modify_date\":\"2017-10-23T10:36:31.274Z\",\"Job_Hours\":1,\"Job_progress\":100,\"contract\":[\"aaa\"],\"Job_status\":\"Completed\",\"remark\":[\"0\"]}",
+      "2": "{\"id\":2,\"Name_Surname\":\"Oracle Hotman\",\"Job_Type\":\"Comply\",\"Job_arear\":\"\",\"Base_Technology\":[\"Network\",\"Security\"],\"UID\":2,\"Job_Header\":\"sdfgdfg\",\"Job_detail\":\"sdfgdfg\",\"create_date\":\"2017-10-23T10:34:34.568Z\",\"Job_date\":\"2017-10-27T00:00:00.000Z\",\"modify_date\":\"2017-10-23T10:35:07.229Z\",\"Job_Hours\":1,\"Job_progress\":100,\"contract\":[\"sdf\"],\"Job_status\":\"Completed\",\"remark\":[\"0\"]}"
     }
   }
 }
