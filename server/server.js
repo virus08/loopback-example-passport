@@ -101,11 +101,11 @@ app.get('/',ensureLoggedIn('/local'), function(req, res, next) {
 	routes:[{ 
 		path: '/',
 		component: { 
-			template: '<Timesheet source="http://localhost:3000/api/timesheets" uid=1></test1>' 
+			template: '<Timesheet source="/api/timesheets" uid=1></test1>' 
 		}},{ 
-		path: '/Dashboard',
+		path: '/Jobend',
 		component: { 
-			template: '<div><h1> Dashboard v.1</h1></div>' 
+			template: '<Timesheet1 source="/api/timesheets" uid=1></test1>' 
 			}},{ 
 		path: '/Timesheet',
 		component: { 
@@ -119,11 +119,11 @@ app.get('/',ensureLoggedIn('/local'), function(req, res, next) {
 				icont:'fa fa-th-large',
 				menus:[
 				{
-					href:'#/Dashboard',
-					label:'Dashboard v.1'
+					href:'#/',
+					label:'Home'
 				},{
-					href:'#/Timesheet',
-					label:'Dashboard v.2'
+					href:'#/Jobend',
+					label:'Job End'
 				}],
 			}
 		]

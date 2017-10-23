@@ -39,12 +39,142 @@ Vue.component('New_Job', {
 		 `
 		 <div class="ibox-content">
           	<div class="text-center">
-		 		<a data-toggle="modal" class="btn btn-sm btn-primary pull-right m-t-n-xs" href="#newjob-form">Add Job</a>
+		 		<a data-toggle="modal" class="btn dim btn-sm btn-primary pull-right m-t-n-xs" :href=name+UID >Add Job</a>
 		 	</div>
 		 </div>
 		 `
 	})
+
+
 	
+Vue.component('edit', {
+	props:['name','data'],
+	 template: 
+		 `
+		<div class="col-md-3">
+			<div class="text-center">
+				<a data-toggle="modal" class="btn btn-primary btn-sm" :href=ahref+name+data.id>
+				 <i class="fa fa-edit"></i>
+				 </a>
+			</div>
+		 	<div :id=name+data.id class="modal fade" aria-hidden="true">
+		 		<div class="modal-dialog">
+		 		<div class="modal-content">
+		 			<div class="modal-body">
+		 				<div class="row">
+		 					<div class="col-sm-6 b-r">
+		 						<div class="form-group">
+		 							<p><label>Job Name</label> {{data.Job_Header}} </p>
+		 							<p><label>Job Type</label> {{data.Job_Type}} </p>
+                                    <p><label>Deadline</label> {{data.Job_date|formatDate}} </p>
+                                    <label>Base On Technology</label>
+                                    	<ul>
+                                    		<li v-for="tech in data.Base_Technology">{{tech}}</li>
+                                    	</ul>
+                                    <label>Contact</label>
+                                    	<ul>
+                                    		<li v-for="contact in data.contract">{{contact}}</li>
+                                    	</ul>
+		 						</div>		
+		 					</div>
+		 						<div class="col-sm-6">
+		 							<div class="form-group">
+		 							<label>Job Hours</label> <input type="number" v-model="data.Job_Hours" placeholder="ชั่วโมง" class="form-control">
+		 							<label>Job Detail</label> <input type="text" v-model="data.Job_detail" placeholder="รายละเอียด" class="form-control">
+		 							<label>Job status</label> 
+		 							<select class="form-control m-b" v-model="data.Job_status">
+                                        <option v-for="option in jobstatus">{{option}}</option>                                       
+                                    </select>
+		 							<label>Job Progress</label>
+		 							 <input type="text" v-model="data.Job_progress" placeholder="ความคืบหน้า" class="form-control">
+		 							
+		 						</div>
+		 						<div>
+		 							<button class="btn btn-sm btn-primary pull-right m-t-n-xs" v-on:click="update">
+		 								<strong>Update</strong>
+		 							</button>
+		 						</div>
+		 					
+		 				</div>
+		 			</div>
+		 		</div>
+		 	</div>
+		 </div>
+		
+		 `,
+		 data: function () {
+			    return {
+			    	ahref:'#',
+			    	jobstatus:[
+			    		'Open',
+			    		'On Progress',
+			    		'Completed',
+			    		'Cancel'
+			    	],
+			    }
+		 },
+		 methods: {
+			 update:function(){
+				 this.data.modify_date=new Date();
+		    	 this.$http.post('/api/timesheets/'+this.data.id+'/replace',this.data)
+		    	  //$('#'+this.name+this.data.id).modal('hide')
+		    	  //location.href = "/"
+				 location.href = "/"
+		      }
+		    }
+	})
+
+Vue.component('delete', {
+	props:['name','data'],
+	 template: 
+		 `
+		<div class="col-md-3">
+			<div class="text-center">
+				<a data-toggle="modal" class="btn btn-primary btn-sm" :href=ahref+name+data.id>
+				 <i class="fa fa-eraser"></i>
+				 </a>
+			</div>
+		 	<div :id=name+data.id class="modal fade" aria-hidden="true">
+		 		<div class="modal-dialog">
+		 			<div class="modal-content">
+		 				<div class="modal-body">
+		 					<div class="row">
+		 						<div> คุณต้องการลบ </div>
+		 							{{data}}
+		 						<div class="pull-right" >
+		 							<button class="btn btn-danger dim" type="button"  v-on:click="Cancel">
+		 								<i class="fa fa-times"></i>
+		 							</button>
+		 							<button class="btn btn-danger dim" type="button"  v-on:click="Submit">
+		 								<i class="fa fa-check"></i>
+		 							</button>
+		 					</div>
+		 				</div>
+		 			</div>
+		 		</div>
+		 	</div>
+		 </div>
+		
+		 `,
+		 data: function () {
+			    return {
+			    	ahref:'#'
+			    }
+		 },
+		 methods: {
+			 Cancel:function(){
+		    	  //this.$http.post('/api/timesheets',this.timesheet)
+		    	  //$('#'+this.name+this.data.id).modal('hide')
+		    	  //location.href = "/"
+				 location.href = "/"
+		      },
+		      Submit:function(){
+		    	 this.$http.delete('/api/timesheets/'+this.data.id)
+		    	 location.href = "/";
+		     }
+		       
+		    }
+	})
 	
 Vue.component('c-form', {
 	 props: ['f_id','f_name','f_detail','profile'],
@@ -164,13 +294,13 @@ Vue.component('c-form', {
 			            });
 			        },
 			      addjob:function(){
-			    	  this.$http.post('http://localhost:3000/api/timesheets',this.timesheet)
+			    	  this.$http.post('/api/timesheets',this.timesheet)
 			    	  $('#'+this.f_id).modal('hide')
 			    	  location.href = "/"
 			    	  this.$emit('AddJob')
 			      },
 			     addct:function(){
-			    	 this.timesheet.Job_Hours+=1;
+			    	 //this.timesheet.Job_Hours+=1;
 			    	 this.timesheet.contract.push(this.newct);
 			     }
 			       
@@ -207,7 +337,7 @@ Vue.component('Timesheet', {
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr v-for="data in list">
+                                    <tr v-for="data in list" >
                                         <td></td>
                                         <td>{{data.Job_Header}}</td>
                                         <td>{{data.Job_Type}}</td>
@@ -218,15 +348,14 @@ Vue.component('Timesheet', {
                                      	<td>{{data.Job_status}}</td>
                                         <td>
                                         	<div class="row">
-                                        		<div class="col-md-1"><a href="#"><i class="fa fa-pencil-square-o text-navy"></i></a></div>
-                                        		<div class="col-md-1"><a href="#"><i class="fa fa-times text-navy"></i></a></div>
-                                        		
+                                        		<edit name=edit :data=data> </edit>
+                                        		<delete name=delete :data=data> </delete>
                                         	</div>
                                         </td>
                                     </tr>
                                     </tbody>
                                 </table>
-                                <New_Job></New_Job>
+                                <New_Job name='#newjob-form' UID=1 ></New_Job>
                             </div>
                             
                         </div>
@@ -245,7 +374,83 @@ Vue.component('Timesheet', {
 	            this.$http.get(this.source).then(function(response){
 	            	var uid=parseInt(this.uid);
 	                this.list = response.data.filter(function (n){
-	                    return n.UID===uid;
+	                    return n.UID===uid && (n.Job_status=='Open' || n.Job_status=='On Progress');
+	                });
+	            }, function(error){
+	                console.log(error.statusText);
+	            });
+	        }
+	    },
+	    mounted: function () {
+	        this.getUsers();
+	    }
+	})
+
+Vue.component('Timesheet1', {
+	 props: ['source','uid'],
+	 template: `<div>
+		 	<div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Time sheet</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+
+                                        <th></th>
+                                        <th>Job Name</th>
+                                        <th>Type</th>
+                                        <th>Hours</th>
+                                        <th>Deadline </th>
+                                        <th>Task</th>
+                                        <th>Progress</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr v-for="data in list" >
+                                        <td></td>
+                                        <td>{{data.Job_Header}}</td>
+                                        <td>{{data.Job_Type}}</td>
+                                        <td>{{data.Job_Hours}}</td>
+                                        <td>{{data.Job_date | formatDate}}</td>
+                                        <td><circle-slider :side="20" :progress-width="10" v-model="data.Job_progress"></circle-slider></td>
+                                        <td>{{data.Job_progress}} %</td>
+                                     	<td>{{data.Job_status}}</td>
+                                        <td>
+                                        	<div class="row">
+                                        		<edit name=edit :data=data> </edit>
+                                        		<delete name=delete :data=data> </delete>
+                                        	</div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <New_Job name='#newjob-form' UID=1 ></New_Job>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+		 </div>
+	 `,
+	 data: function () {
+	    return {
+	    	list: null
+	    }
+	  },
+	  methods: {
+		  getUsers: function(){
+	            this.$http.get(this.source).then(function(response){
+	            	var uid=parseInt(this.uid);
+	                this.list = response.data.filter(function (n){
+	                    return n.UID===uid && (n.Job_status=='Cancel' || n.Job_status=='Completed');
 	                });
 	            }, function(error){
 	                console.log(error.statusText);

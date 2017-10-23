@@ -8,7 +8,7 @@ block custom_style
 
 block navbar
 	ul#side-menu.nav
-		profile(source="http://localhost:3000/api/profiles/#{user.id}")
+		profile(source="/api/profiles/#{user.id}")
 		each userapp,index in userapps
 			app-menus(id=index,app_icont=userapp.icont ,app_href= userapp.href,app_name=userapp.name, :menus=JSON.stringify(userapp.menus))
 				
@@ -21,5 +21,6 @@ block content-header
 block content-body
 	div.gray-bg.dashbard-1
 		router-view
-		c-form(f_id="newjob-form",f_name="Add New Job",f_detail="This in test to deploy",profile="http://localhost:3000/api/profiles/#{user.id}")
+		c-form(f_id="newjob-form#{user.id}",f_name="Add New Job",f_detail="This in test to deploy",profile="/api/profiles/#{user.id}")
+		
 		
